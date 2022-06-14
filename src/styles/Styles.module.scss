@@ -1,0 +1,79 @@
+@import './variables.scss';
+
+.stickyTop {
+  position: fixed;
+  transform: translate(-50%, 0%);
+  height: $partialHeight;
+  width: $partialWidth;
+  background-color: red;
+  left: 50%;
+  top: 0px;
+}
+
+.stickyBottom {
+  position: fixed;
+  transform: translate(-50%, 0%);
+  height: $partialHeight;
+  width: $partialWidth;
+  background-color: green;
+  left: 50%;
+  bottom: 0px;
+}
+
+.sidebar {
+  top: calc(-1 * $partialHeight);
+  min-height: 2500px;
+  width: $partialWidth;
+  background-color: black;
+}
+
+.hero {
+  // position: absolute;
+  width: $heroWidth;
+  z-index: 2;
+  background-color: blue;
+  height: 300px;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: 100px 100px;
+}
+
+.tableHeader {
+  grid-column: 1 / -1;
+}
+
+.tableRow {
+
+}
+
+.animatedElement {
+  position: relative;
+  left: 0px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  background-color: yellow;
+}
+
+.animatedElement:hover {
+  transition-duration: 2s;
+  transform: translate(calc($heroWidth - $animatedElementWidth));
+}
+
+.deleteButton {
+
+}
+
+.validation {
+  color: red;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: $partialHeight;
+  margin: auto;
+}
